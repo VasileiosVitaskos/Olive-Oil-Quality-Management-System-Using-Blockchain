@@ -1,0 +1,215 @@
+[
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "_number",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "_acidity",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "_k268",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "_k232",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "_dissadvantagemd",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "_polyphenols",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "_vitaminE",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "_pesticides",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "_fertilizers",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "_dehydratedSterols",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "_temperature",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "_plasticizers",
+				"type": "uint256"
+			}
+		],
+		"name": "addNumber",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "_number",
+				"type": "uint256"
+			}
+		],
+		"name": "getNumberData",
+		"outputs": [
+			{
+				"components": [
+					{
+						"internalType": "uint256",
+						"name": "acidity",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "k268",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "k232",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "dissadvantagemd",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "polyphenols",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "vitaminE",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "pesticides",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "fertilizers",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "dehydratedSterols",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "temperature",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "plasticizers",
+						"type": "uint256"
+					}
+				],
+				"internalType": "struct NumberChecker.QualityData",
+				"name": "",
+				"type": "tuple"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"name": "numbers",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "acidity",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "k268",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "k232",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "dissadvantagemd",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "polyphenols",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "vitaminE",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "pesticides",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "fertilizers",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "dehydratedSterols",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "temperature",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "plasticizers",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	}
+]

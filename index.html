@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Olive Oil Quality Checker</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Olive Oil Quality Checker</h1>
+        <p>Enter product code to check quality and retrieve data:</p>
+        <input type="number" id="inputNumber" min="1" max="5" placeholder="Enter number">
+        <button onclick="checkQuality()">Check Quality</button>
+        <button onclick="retrieveData()">Retrieve Data</button>
+        <p id="result"></p>
+        <p id="dataDisplay"></p>
+    </div>
+
+    <script>
+        async function checkQuality() {
+            const inputNumber = document.getElementById('inputNumber').value;
+            try {
+                const response = await fetch(`http://localhost:3000/checkQuality/${inputNumber}`);
+                const data = await response.json();
+
+                if (data.passed) {
+                    document.getElementById('result').innerText = 'Olive oil quality passed!';
+                } else {
+                    document.getElementById('result').innerText = 'Olive oil quality failed. ' + data.failureReason;
+                }
+            } catch (error) {
+                console.error('Error checking quality:', error);
+                document.getElementById('result').innerText = 'Error checking quality';
+            }
+        }
+
+        async function retrieveData() {
+        const inputNumber = document.getElementById('inputNumber').value;
+        try {
+            const response = await fetch(`http://localhost:3000/getData/${inputNumber}`);
+            const data = await response.json();
+
+            if (response.ok) {
+                document.getElementById('dataDisplay').innerText = `Data Retrieved: 
+                Number - ${data.Number},
+                Acidity - ${data.Acidity},
+                K268 - ${data.K268},
+                K232 - ${data.K232},
+                Dissadvantagemd - ${data.Dissadvantagemd},
+                Polyphenols - ${data.Polyphenols},
+                VitaminE - ${data.VitaminE},
+                Pesticides - ${data.Pesticides},
+                Fertilizers - ${data.Fertilizers},
+                Dehydrated Sterols - ${data.DehydratedSterols},
+                Temperature - ${data.Temperature},
+                Plasticizers - ${data.Plasticizers},
+                Quality Check Passed: ${data.QualityCheck.passed ? 'Yes' : 'No'}
+                ${data.QualityCheck.failureReason ? 'Reason: ' + data.QualityCheck.failureReason : ''}`;
+            } else {
+                document.getElementById('dataDisplay').innerText = 'Failed to retrieve data. ' + data;
+            }
+        } catch (error) {
+            console.error('Error retrieving data:', error);
+            document.getElementById('dataDisplay').innerText = 'Error retrieving data';
+        }
+    }
+    </script>
+</body>
+</html>
